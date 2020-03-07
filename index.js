@@ -40,7 +40,6 @@ function testLink(input) {
                 }
     
                 if(fileExists+fileNotExists == data.length) {
-                    console.log(report);
                     console.log("=================================");
                     console.log(fileCount + " Files Processed");
                     console.log("Success : " + fileExists+"/"+fileCount);

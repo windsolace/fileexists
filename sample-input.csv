@@ -1,0 +1,4 @@
+url,fundid,host,path,name
+https://www.stackoverflow.com,,stackoverflow.com,,
+invalidurl.com,,,,
+https://github.com/windsolace/fileexists,,github.com,/windsolace/fileexists,
