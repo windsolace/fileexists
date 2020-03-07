@@ -1,0 +1,17 @@
+{
+  "name": "fileexists",
+  "version": "1.0.0",
+  "description": "Process excel columns and check if file exists",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eugene Ng",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^2.3.2",
+    "json2csv": "^4.5.4",
+    "url-exists": "^1.0.3"
+  }
+}
