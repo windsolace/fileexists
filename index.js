@@ -1,10 +1,10 @@
 const csv = require('csv-parser');
 const fs = require('fs');
-const http = require('http');
 const urlExists = require('url-exists');
 const Parser = require('json2csv').Parser;
 
-console.log("hello world");
+console.log("Process started to check files. . .");
+var startTime = process.hrtime();
 var results = readCSV();
 testLink(results);
 
@@ -39,11 +39,14 @@ function testLink(input) {
                     })
                 }
     
+                //conclude process
                 if(fileExists+fileNotExists == data.length) {
+                    var endTime = process.hrtime(startTime);
                     console.log("=================================");
-                    console.log(fileCount + " Files Processed");
-                    console.log("Success : " + fileExists+"/"+fileCount);
-                    console.log("Failed: "+fileNotExists+"/"+fileCount);
+                    console.info(fileCount + " Files Processed");
+                    console.info("Success : " + fileExists+"/"+fileCount);
+                    console.info("Failed: "+fileNotExists+"/"+fileCount);
+                    console.info("Time elapse: " + endTime[0] + "s");
                     console.log("=================================");
 
                     return new Promise((resolve,reject)=> {
